@@ -1,0 +1,10 @@
+def is_armstrong(num):
+  power= len(str(num))
+  sum_of_power=sum(int(digit)**power for digit in str(num))
+  return num==sum_of_power
+start=int(input("enter start of range:"))
+end=int(input("enter end of range:"))
+print("armstrong numbers between",start,"and",end,"are:")
+for num in range(start,end+1):
+  if is_armstrong(num):
+    print(num)
